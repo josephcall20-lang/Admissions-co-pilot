@@ -1,5 +1,17 @@
-"scripts": {
-  "dev": "vite",
-  "build": "npm install @tailwindcss/vite && vite build",
-  "preview": "vite preview"
+{
+  "name": "admissions-co-pilot",
+  "version": "1.0.0",
+  "description": "Admissions Co-pilot frontend",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm install @tailwindcss/vite && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.12"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "@vitejs/plugin-react": "^4.2.0"
+  }
 }
