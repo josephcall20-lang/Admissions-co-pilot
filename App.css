@@ -1,0 +1,216 @@
+/* An Oasis of Healing Brand Colors & Modern Design */
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  /* An Oasis of Healing Brand Colors */
+  --oasis-primary: #2D5A3D;        /* Deep forest green */
+  --oasis-primary-light: #3A7049;  /* Lighter forest green */
+  --oasis-secondary: #4A8B5C;      /* Medium green */
+  --oasis-accent: #6BB77B;         /* Light green accent */
+  --oasis-light: #E8F5EA;          /* Very light green */
+  
+  /* Override default colors with Oasis branding */
+  --primary: #2D5A3D;
+  --primary-foreground: #ffffff;
+  --secondary: #E8F5EA;
+  --secondary-foreground: #2D5A3D;
+  --accent: #6BB77B;
+  --accent-foreground: #ffffff;
+  --background: #fafbfa;
+  --foreground: #1f2937;
+  --card: #ffffff;
+  --card-foreground: #1f2937;
+  --border: #e5e7eb;
+  --input: #ffffff;
+  --ring: #2D5A3D;
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
+  --destructive: #ef4444;
+  --radius: 0.75rem;
+}
+
+/* Global Styles with Oasis Branding */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, var(--oasis-light) 0%, #fafbfa 100%);
+  color: var(--foreground);
+  line-height: 1.6;
+}
+
+/* Header Styling */
+.app-header {
+  background: linear-gradient(135deg, var(--oasis-primary) 0%, var(--oasis-primary-light) 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 25px -5px rgba(45, 90, 61, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.app-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
+}
+
+.app-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.app-header p {
+  font-size: 1.125rem;
+  opacity: 0.9;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Tab Styling */
+[data-state="active"] {
+  background: linear-gradient(135deg, var(--oasis-primary) 0%, var(--oasis-primary-light) 100%) !important;
+  color: white !important;
+}
+
+/* Card Enhancements */
+.card {
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Metric Cards */
+.metric-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.metric-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--oasis-primary) 0%, var(--oasis-accent) 100%);
+}
+
+/* Button Styling */
+.btn-primary {
+  background: linear-gradient(135deg, var(--oasis-primary) 0%, var(--oasis-primary-light) 100%);
+  border: none;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgba(45, 90, 61, 0.3);
+}
+
+/* Badge Colors */
+.badge-inquiry {
+  background: rgba(107, 114, 128, 0.1);
+  color: #374151;
+}
+
+.badge-docs-requested {
+  background: rgba(45, 90, 61, 0.1);
+  color: var(--oasis-primary);
+}
+
+.badge-ready {
+  background: rgba(107, 183, 123, 0.1);
+  color: var(--oasis-secondary);
+}
+
+.badge-scheduled {
+  background: rgba(139, 92, 246, 0.1);
+  color: #8B5CF6;
+}
+
+.badge-healthy {
+  background: rgba(107, 183, 123, 0.1);
+  color: var(--oasis-secondary);
+}
+
+.badge-warning {
+  background: rgba(245, 158, 11, 0.1);
+  color: #F59E0B;
+}
+
+.badge-error {
+  background: rgba(239, 68, 68, 0.1);
+  color: #EF4444;
+}
+
+/* Progress Bars */
+.progress-fill {
+  background: linear-gradient(90deg, var(--oasis-primary) 0%, var(--oasis-accent) 100%);
+}
+
+.progress-fill.success {
+  background: linear-gradient(90deg, var(--oasis-secondary) 0%, var(--oasis-accent) 100%);
+}
+
+/* Form Inputs */
+input:focus, select:focus, textarea:focus {
+  border-color: var(--oasis-primary);
+  box-shadow: 0 0 0 3px rgba(45, 90, 61, 0.1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--oasis-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--oasis-primary-light);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .app-header h1 {
+    font-size: 2rem;
+  }
+  
+  .app-header p {
+    font-size: 1rem;
+  }
+}
